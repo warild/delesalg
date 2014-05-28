@@ -1,5 +1,5 @@
-GIT TEST
-Lagt til litt...
-og noe mer
+Lag POM med kommentarer. 
 
-og fra jobb-pc lagt til ligtt til
+
+--------------------------
+Git fungerer
