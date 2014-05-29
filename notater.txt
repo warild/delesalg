@@ -1,5 +1,18 @@
-Lag POM med kommentarer. 
+Lag POM med kommentarer.
+Git fungerer på bærbarPC
 
+Beskriv datastruktur 
+Beskriv gui
+Beskriv behavior
+Opprett prosjekter.
 
+Beskriv metoder
+Lag tester og kode for meta
+lag lag gui
+lag repo db
+lag repo filbasert?
 --------------------------
-Git fungerer
+UTFØRT:
+--------------------------
+Git fungerer på hjemmePC
+Git fungerer på jobbPC
