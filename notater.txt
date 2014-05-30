@@ -1,4 +1,6 @@
 Lag POM med kommentarer.
+Finn mer POM-info og legg til
+
 Git fungerer på bærbarPC
 
 Beskriv datastruktur 
@@ -14,5 +16,7 @@ lag repo filbasert?
 --------------------------
 UTFØRT:
 --------------------------
+
+Opprettet og commited første prosjekt
 Git fungerer på hjemmePC
 Git fungerer på jobbPC
