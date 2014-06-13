@@ -9,7 +9,7 @@
   
   <groupId>no.onlevel</groupId>
   <artifactId>api-meta-deler-facade</artifactId>
-  <name>Deler-meta: Facade-API</name>
+  <name>Meta: Facade-api</name>
   <description>Facade for meta</description>
 
 </project>

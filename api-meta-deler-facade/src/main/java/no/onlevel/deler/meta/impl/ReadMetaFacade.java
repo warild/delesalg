@@ -28,16 +28,12 @@ public class ReadMetaFacade implements ReadMetaFacadeApi {
 	public void createProperty(PropertyDto property) {
 	}
 	
-	//	- vis noen/tilat alle - vis+tillat=begrenset - vis/tillat = alle
 	public void addPropertyValue(int propertyId, PropertyValueDto property) {
 	}
 	
+	//	- vis noen/tilat alle - vis+tillat=begrenset - vis/tillat = alle
 	
- /* 2. [opprette ny property]
- *    createNewPropertyType
- *    
- * 3. [opprette ny part-type]
- *    createNewPartType(properties)
+ /*    createNewPartType(properties)
  * 4. Endre/Slette
  *    addvalue(propId)
  *    removeValue(propId)
