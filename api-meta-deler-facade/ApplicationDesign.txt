@@ -1,0 +1,69 @@
+Funksjonelt:
+1. En vare kommer inn. Den registreres
+2. Hvordan skal den selges? hel eller i deler? Delene bestemmes.
+3. Finn deler. Vis deler.
+4. Registrer at deler er solgt
+5. Slett vare -> historikk -> solgt/skrotet?
+
+------
+Registrere deler:
+1. Fra 
+	navn og adresse
+2. Deletype 
+	Delentypens egenskaper
+----
+Mal for 'Fra' <privat, bedrift>
+Mal for 'Deletype' <lastebil, traktor, semi, ...> 
+----
+Opprett mal
+Endre mal
+Slett mal
+Vis mal
+----
+Mal Facade:
+ - opprettMal(maltype, malNavn, egenskaper<type, navn, verdi, job>) 
+ - leggTilEgenskap(maltype,)
+ - slettEgenskap(maltype,)
+ - slettMal(malType)
+ - visMal(malType)
+ - visMaler()
+ ---
+DB - mal
+ENUM_EGENSKAPER
+id
+type
+type_navn
+verdi
+info
+linjeNr
+
+
+MAL
+ID, NAVN
+
+MAL_EGENSKAPER
+MAL_ID, TYPE, TypeNavn, Verdi, J
+
+VARE_MAL
+ egenskapGruppe_type
+ selgerSamling
+
+VARE_ENUM
+ vare_type
+ vare_typeNavn
+
+EGENSKAPGRUPPE
+ egenskapGruppe_type
+ egenskap_enum_id
+ 
+EGENSKAPGRUPPE_ENUM
+ egenskapGruppe_type
+ egenskapGruppe_typeNavn
+ verdi...
+ 
+EGENSKAP_ENUM
+ type
+ typenavn
+ verdi - default
+ linjeNr
+ info
