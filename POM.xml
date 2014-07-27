@@ -8,8 +8,8 @@
   <artifactId>deler</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   
-  <name>Deler</name>
-  <description>Håndterong av deler</description>
+  <name>Lager</name>
+  <description>Håndtering av deler</description>
   
   <!-- Dette er en (parent)pom og ikke et prosjekt med kode. -->
   <!-- Children ref til 'parent' er parents project coordinates.  -->
@@ -19,11 +19,14 @@
   <!-- properties som kan brukes i andre pommer slik: ${thing.prop} -->
   <properties>
 	<thing.prop>value</thing.prop>
+	<project.version>0.0.1-SNAPSHOT</project.version>
+
   </properties>
  
   <!-- Moduler som også skal være med i bygget -->
   <modules>
-	<module>api-meta-deler-facade</module>
+	<module>maler</module>
+
   </modules>
   
   <!-- library dependencies -->
@@ -40,7 +43,7 @@
     </dependency>
   </dependencies>
   
-  <!-- Bygging av appen -->
+  <!-- Bygging av appen med Maven-->
   <build>
     <plugins>
   
@@ -52,7 +55,7 @@
         <configuration>         
 		  <source>1.7</source>
           <target>1.7</target>
-        </configuration>
+        </configuration>		
       </plugin>
 	  
 	  <!-- Eclipse oppsett -->	  
@@ -65,11 +68,12 @@
             <sourceExclude>**/.git/**</sourceExclude>
           </sourceExcludes>
           <sourceIncludes>
-            <sourceInclude>**/*.myExtension</sourceInclude>
+            <!-- <sourceInclude>**/*.myExtension</sourceInclude> -->
           </sourceIncludes>
         </configuration>
       </plugin>
 	  
     </plugins>
+    <finalName>superPOM: Final name</finalName>	
   </build>
 </project>

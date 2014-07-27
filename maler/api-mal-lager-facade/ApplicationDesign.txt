@@ -1,0 +1,20 @@
+Funksjonelt:
+1. En vare kommer inn. Den registreres
+2. Hvordan skal den selges? hel eller i deler? Delene bestemmes og registreres.
+3. Finn deler. Vis deler.
+4. Registrer at deler er solgt
+5. Slett vare -> historikk -> solgt/skrotet?
+
+-----------------------------------------------------------------------
+- Registrering av vare:
+Vis liste med alle varer som kan komme inn <- db
+velg en av varene -> service
+hent alle varedeler m/egenskaper
+Vis avhuking av varedeler - vil tilsvarende egenskaper som må fylles ut.
+Lagre ny del. Deler lagres med ref til innkommet vare, selger, ++...?
+
+---------
+Må kunne: 
+1. opprette mal med egenskaper for en vare
+2. knytte mal for vare sammen med mal for varedeler.
+- innkommet vare: Alltid Selger+ egenskaper+ ???

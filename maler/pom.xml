@@ -1,0 +1,30 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  
+  <modelVersion>4.0.0</modelVersion>
+  
+  <parent>
+    <groupId>no.onlevel</groupId>
+    <artifactId>deler</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+  </parent>
+  
+  <groupId>no.onlevel</groupId>
+  <artifactId>maler</artifactId>
+  <name>- Maler</name>
+  <description>Maler</description>  
+  <packaging>pom</packaging>
+ 
+  <modules>
+	<module>api-mal-lager-repo</module>
+	<module>api-mal-lager-facade</module>
+	<module>mal-lager-repo</module>	
+	<module>mal-lager-service</module>
+	<module>mal-lager-facade</module>
+	
+  </modules>
+ 
+  <dependencies>
+
+  </dependencies>
+
+</project>
