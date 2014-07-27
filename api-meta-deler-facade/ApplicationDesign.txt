@@ -1,6 +1,6 @@
 Funksjonelt:
 1. En vare kommer inn. Den registreres
-2. Hvordan skal den selges? hel eller i deler? Delene bestemmes.
+2. Hvordan skal den selges? hel eller i deler? Delene bestemmes og registreres.
 3. Finn deler. Vis deler.
 4. Registrer at deler er solgt
 5. Slett vare -> historikk -> solgt/skrotet?
@@ -52,14 +52,15 @@ VARE_ENUM
  vare_type
  vare_typeNavn
 
-EGENSKAPGRUPPE
+EGENSKAPGRUPPE_C
  egenskapGruppe_type
  egenskap_enum_id
  
-EGENSKAPGRUPPE_ENUM
+EGENSKAPGRUPPE_ENUM_D
  egenskapGruppe_type
  egenskapGruppe_typeNavn
- verdi...
+ linjeNr
+ info
  
 EGENSKAP_ENUM
  type
