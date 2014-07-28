@@ -20,7 +20,6 @@ public interface FraMalRepoApi {
 	
 	List<MalTypeDto> lesMalTyper();
 			
-	List<EgenskapTypeDto> lesEgenskaper();
 	
 	EgenskapTypeDto lesEnEgenskap(int egenskapId);
 }

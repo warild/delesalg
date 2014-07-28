@@ -12,7 +12,7 @@ import no.onlevel.deler.mal.repo.domain.MalDto;
  */
 public interface TilMalRepoApi {
 
-	void nyEgenskapType(EgenskapTypeDto egenskapTypeDto);
+	void opprettNyEgenskap(EgenskapTypeDto egenskapTypeDto);
 	
 	String nyMalType(String typeNavn);
 	void nyeMalEgenskaper(String malType, List<String> egenskapTyperListe);	

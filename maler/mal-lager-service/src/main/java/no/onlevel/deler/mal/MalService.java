@@ -82,7 +82,7 @@ public class MalService {
 		}
 		
 		// Opprett ny egenskap
-		tilMalRepo.nyEgenskapType(mapEgenskapTypeDto(egenskap));
+		tilMalRepo.opprettNyEgenskap(mapEgenskapTypeDto(egenskap));
 	}
 	
 	

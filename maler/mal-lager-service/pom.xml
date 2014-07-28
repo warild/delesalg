@@ -7,13 +7,11 @@
     <version>0.0.1-SNAPSHOT</version>
   </parent>
   
-  <groupId>no.onlevel</groupId>
   <artifactId>mal-lager-service</artifactId>
   <name>- - Implementasjon: Service</name>
   <description>Implementasjon av malservice</description>
 
   <dependencies>
-    
     <dependency>
       <groupId>no.onlevel</groupId>
       <artifactId>api-mal-lager-facade</artifactId>
@@ -25,11 +23,6 @@
       <version>${project.version}</version>
     </dependency>
     
-    <dependency>
-      <groupId>no.onlevel</groupId>
-      <artifactId>mal-lager-repo</artifactId>
-      <version>${project.version}</version>
-    </dependency>
     
   </dependencies>
   
