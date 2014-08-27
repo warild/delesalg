@@ -1,7 +1,7 @@
 package no.onlevel.deler.mal.domain;
 
 
-public class Mal {
+public class Gruppe {
 
 	int malId;
 	String type;
@@ -9,7 +9,7 @@ public class Mal {
 	String info;
 	Integer linjeNr;
 	
-	public Mal(int malId, String type, String typeNavn, String info, Integer linjeNr){
+	public Gruppe(int malId, String type, String typeNavn, String info, Integer linjeNr){
 		this.malId = malId; 
 		this.type = type; 
 		this.typeNavn = typeNavn; 

@@ -7,7 +7,7 @@ import java.util.Set;
 
 import sun.security.action.GetLongAction;
 import no.onlevel.deler.mal.domain.Egenskap;
-import no.onlevel.deler.mal.domain.Mal;
+import no.onlevel.deler.mal.domain.Gruppe;
 import no.onlevel.deler.mal.repo.api.FraMalRepoApi;
 import no.onlevel.deler.mal.repo.api.TilMalRepoApi;
 import no.onlevel.deler.mal.repo.domain.EgenskapTypeDto;
@@ -91,13 +91,13 @@ public class MalService {
 	 * 
 	 * @return
 	 */
-	public List<Mal> hentAlleMalTyper() {
+	public List<Gruppe> hentAlleMalTyper() {
 		List<MalTypeDto> malTypeDtoListe = fraMalRepo.lesMalTyper();
-		List<Mal> malTypeListe = new ArrayList<Mal>();
+		List<Gruppe> malTypeListe = new ArrayList<Gruppe>();
 		for (int nr = 0; nr < malTypeDtoListe.size(); nr++) {
 			MalTypeDto malTypeDto = malTypeDtoListe.get(nr);
 
-			Mal mal = new Mal(malTypeDto.getMalId(), malTypeDto.getType(),
+			Gruppe mal = new Gruppe(malTypeDto.getMalId(), malTypeDto.getType(),
 					malTypeDto.getTypeNavn(), malTypeDto.getInfo(),
 					malTypeDto.getLinjeNr());
 
@@ -114,14 +114,14 @@ public class MalService {
 	 * 
 	 * @return
 	 */
-	public Mal hentEnMal(String malType) {
+	public Gruppe hentEnMal(String malType) {
 		MalDto malDto = fraMalRepo.lesEnMal(malType);
 		if (malDto == null) {
 			// exception ???
 			return null;
 		} else {
 			// lagMal(malDto)
-			return new Mal(malDto.getMalId(), malDto.getType(),
+			return new Gruppe(malDto.getMalId(), malDto.getType(),
 					malDto.getTypeNavn(), malDto.getInfo(), malDto.getLinjeNr());
 		}
 	}

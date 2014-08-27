@@ -5,19 +5,14 @@ package no.onlevel.deler.mal.domain;
  *
  */
 public class Egenskap {
-	int egenskapId;
+	String gruppe;
 	String type;
 	String typeNavn;
 	String verdi;
 	String info;
 	Integer linjeNr;
 	
-	public int getEgenskapId() {
-		return egenskapId;
-	}
-	public void setEgenskapId(int egenskapId) {
-		this.egenskapId = egenskapId;
-	}
+
 	public String getType() {
 		return type;
 	}
@@ -47,5 +42,11 @@ public class Egenskap {
 	}
 	public void setLinjeNr(Integer linjeNr) {
 		this.linjeNr = linjeNr;
+	}
+	public String getGruppe() {
+		return gruppe;
+	}
+	public void setGruppe(String gruppe) {
+		this.gruppe = gruppe;
 	}	
 }

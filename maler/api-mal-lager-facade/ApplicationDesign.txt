@@ -1,20 +1,76 @@
 Funksjonelt:
-1. En vare kommer inn. Den registreres
-2. Hvordan skal den selges? hel eller i deler? Delene bestemmes og registreres.
-3. Finn deler. Vis deler.
-4. Registrer at deler er solgt
+1. En vare kommer inn. Den skal registreres:
+ - vis oversikt over alle mulige varer. [gruppert i trestruktur?]
+ - Varene vises gruppert [hel - deler - tilbehør - utstyr - annet]
+ -> Hver innkommetVareType er knyttet til en gruppe -> en service grupperer varetypene.
+ 
+2. En varetype velges
+ - vis alle mulige deler for varetypen[valgliste] (kun to nivåer: Varetype -> deler => fyll inn egenskaper) - ikke avhengig av trestruktur for å FINNE varetype.
+ 
+3. Velg de deler som skal videreselges 
+ - vis de nødvendige faktalinjer.
+ 
+4. Registrer faktalinjer 
+ - lagre pr del
+---
+5. Finn deler. Vis deler.
+
+6. Registrer at deler er solgt
+
 5. Slett vare -> historikk -> solgt/skrotet?
 
 -----------------------------------------------------------------------
 - Registrering av vare:
-Vis liste med alle varer som kan komme inn <- db
-velg en av varene -> service
-hent alle varedeler m/egenskaper
-Vis avhuking av varedeler - vil tilsvarende egenskaper som må fylles ut.
-Lagre ny del. Deler lagres med ref til innkommet vare, selger, ++...?
+Vis liste med alle varer som kan kjøpes inn <- db
+velg en av varene
+registrer SELGER, VARETYPE, VARE_KJENNEMERKE
+Bestem hvordan varen skel selges videre.
+HEL - DELER - SAMMENSATT??
 
 ---------
 Må kunne: 
 1. opprette mal med egenskaper for en vare
 2. knytte mal for vare sammen med mal for varedeler.
-- innkommet vare: Alltid Selger+ egenskaper+ ???
+- innkommet vare: Alltid Selger+ egenskaper+ id
+
+GRUPPE 
+  SELGER -> vanlig mal - som fylles ut av en uavhengig jobb - som er gui relatert!! if (gruppeType == 'selger') -> privat/bedrift? velg mal deretter...  
+  VARE
+  VARE_ID regnr chassisnr ...
+--
+
+ GRUPPE - navn på gruppe - hvilke egenskaper som inngår i gruppa. Fra hvilken egenskapgruppe egenskapene skal hentes fra.
+ GRUPPE, SUB_GRUPPER/GRUPPE_EGENSKAPER
+
+T-C-J-D
+GRUPPE-SUBGRUPPER
+biler - null -  mange sub-grupper /en egenskapGruppe - ikke blanding? OK med blanding! Regnr + deler...? 
+motor - null - egenskaper
+
+GRUPPE-EGENSKAPER -> kan liste alle egenskaper til et varekjøp, fylle inn de ulike og lagre de ulike delene.
+GRUPPE, SAMLINGER_M_EGENSKAPER, EGENSKAPER 
+ 
+--
+Innkommet:
+ - bil
+ - selger
+ - id
+ Selges som:
+ bil/karosseri/seter
+ bil/lasteplan
+ bil/id
+ bil/motor
+ bil/selger
+ 
+ EGENSKAPER_ENUM
+ liste med egenskaper som er gruppert. En gruppe kan bare velge innen gruppen. Må velge hver enkelt egenskap. Kan ikke velge alle (som er alt mulig HK og mm).
+ GRUPPE_TYPE, EGENSKAP
+ - verdi eller videre til ny sub?
+ - neste tabell lesing skal gjøres fra verdi eller sub ? felt = verdi= null/sub=type eller verdi = ""/sub=null
+ - Verdier i egen tabell - kan da ha egne egenskap-objekter
+----
+DB:
+En tabell med egenskaper - delt inn i hvilken gruppe de tilhører? - To veis liste?
+En tabell med grupper og de egenskaper som tilhører gruppen.
+
+Egenskap

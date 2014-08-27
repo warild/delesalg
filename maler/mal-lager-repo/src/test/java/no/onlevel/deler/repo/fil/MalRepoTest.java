@@ -16,6 +16,7 @@ import org.junit.Test;
 public class MalRepoTest {
 
 	private static final String FILNAVN = "src//test//resources//egenskaperEnumTest.txt";
+	
 	@Test
 	public void skrivTilFilTest() throws IOException {
 		// slett testfil..

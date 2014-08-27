@@ -1,0 +1,4 @@
+merke¤Merke¤¤Bilmerke: Ford, Volvo etc¤1
+modell¤Modell¤¤Modell fra produsenten¤2
+type¤Type¤¤Modelltype Feks 1,5D, 2.0T, TDI¤3
+km¤Km¤0¤Kjørelengde¤4

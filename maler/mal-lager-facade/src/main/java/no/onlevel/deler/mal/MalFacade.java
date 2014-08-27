@@ -5,7 +5,7 @@ import java.util.List;
 import javax.annotation.Resource;
 
 import no.onlevel.deler.mal.domain.Egenskap;
-import no.onlevel.deler.mal.domain.Mal;
+import no.onlevel.deler.mal.domain.Gruppe;
 import no.onlevel.deler.mal.repo.exception.NyMalException;
 
 public class MalFacade {
@@ -16,7 +16,7 @@ public class MalFacade {
 	/**
 	 * Vis alle malTyper - slik at en mal kan velges ut til å vises/endres/slettes
 	 */
-	public List<Mal> visAlleMalTyper(){
+	public List<Gruppe> visAlleMalTyper(){
 		return malService.hentAlleMalTyper();
 	}
 
@@ -45,7 +45,7 @@ public class MalFacade {
 	/**
 	 * Vis en malType...
 	 */
-	public Mal visMal(String malType){
+	public Gruppe visMal(String malType){
 		return malService.hentEnMal(malType);
 	}
 	

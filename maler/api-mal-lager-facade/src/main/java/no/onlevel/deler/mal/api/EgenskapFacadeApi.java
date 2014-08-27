@@ -9,11 +9,11 @@ import no.onlevel.deler.mal.domain.Egenskap;
  */
 public interface EgenskapFacadeApi {
 		
-	List<Egenskap> hentEgenskaper();
+	List<Egenskap> hentAlleEgenskaper(String gruppe);
 	
-	Egenskap hentEgenskap(int egenskapId);
+	Egenskap hentEgenskap(String gruppe, String egenskapType);
 	
-	void opprettEgenskap(Egenskap egenskap);
+	void opprettEgenskap(String gruppe, Egenskap egenskap);
 	
 	void endreEgenskap(int egenskapId, Egenskap egenskap);
 	

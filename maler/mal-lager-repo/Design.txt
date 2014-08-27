@@ -7,7 +7,7 @@ Funksjonelt:
 
 ------
 Registrere deler:
-1. Fra 
+1. Selger 
 	navn og adresse
 2. Deletype 
 	Delentypens egenskaper
@@ -28,6 +28,30 @@ Mal Facade:
  - visMal(malType)
  - visMaler()
  ---
+
+GRUPPE 
+  SELGER -> vanlig mal - som fylles ut av en uavhengig jobb - som er gui relatert!! if (gruppeType == 'selger') -> privat/bedrift? velg mal deretter...  
+  VARE
+
+ GRUPPE - navn på gruppe - hvilke egenskaper som inngår i gruppa. Fra hvilken egenskapgruppe egenskapene skal hentes fra.
+ GRUPPE, SUB_GRUPPER eller GRUPPE_EGENSKAPER
+
+T-C-J-D
+GRUPPE-SUBGRUPPER
+biler - null -  mange sub-grupper /en egenskapGruppe - ikke blanding? OK med blanding! Regnr + deler...? 
+motor - null - egenskaper
+
+GRUPPE-EGENSKAPER
+ 
+ EGENSKAPER_ENUM
+ liste med egenskaper som er gruppert. En gruppe kan bare velge innen gruppen. Må velge hver enkelt egenskap. Kan ikke velge alle (som er alt mulig HK og mm).
+ GRUPPE_TYPE, EGENSKAP
+ - verdi eller videre til ny sub?
+ - neste tabell lesing skal gjøres fra verdi eller sub ? felt = verdi= null/sub=type eller verdi = ""/sub=null
+ - Verdier i egen tabell - kan da ha egne egenskap-objekter
+
+ 
+ --
 DB - mal
 ENUM_EGENSKAPER
 id
