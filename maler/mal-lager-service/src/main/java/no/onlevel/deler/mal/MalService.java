@@ -171,7 +171,7 @@ public class MalService {
 	
 	private Egenskap mapEgenskaper(EgenskapTypeDto egenskapTypeDto) {		
 		Egenskap egenskap = new Egenskap();
-		egenskap.setEgenskapId(egenskapTypeDto.getEgenskapId());
+//		egenskap.setEgenskapId(egenskapTypeDto.getEgenskapId());
 		egenskap.setType(egenskapTypeDto.getType());
 		egenskap.setTypeNavn(egenskapTypeDto.getTypeNavn());
 		egenskap.setVerdi(egenskapTypeDto.getVerdi());
