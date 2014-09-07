@@ -1,22 +1,4 @@
-Lag POM med kommentarer.
-Finn mer POM-info og legg til
 
-Git fungerer på bærbarPC
-
-Beskriv datastruktur 
-Beskriv gui
-Beskriv behavior
-Opprett prosjekter.
-
-Beskriv metoder
-Lag tester og kode for meta
-lag lag gui
-lag repo db
-lag repo filbasert?
 --------------------------
 UTFØRT:
 --------------------------
-
-Opprettet og commited første prosjekt
-Git fungerer på hjemmePC
-Git fungerer på jobbPC
