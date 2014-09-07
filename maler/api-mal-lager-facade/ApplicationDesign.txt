@@ -1,11 +1,52 @@
 Funksjonelt:
 1. En vare kommer inn. Den skal registreres:
- - vis oversikt over alle mulige varer. [gruppert i trestruktur?]
- - Varene vises gruppert [hel - deler - tilbehør - utstyr - annet]
- -> Hver innkommetVareType er knyttet til en gruppe -> en service grupperer varetypene.
+ - vis oversikt over alle mulige varer. 
+ - Varene vises gruppert i trestruktur [hel - deler - tilbehør - utstyr - annet]
+ -> varetypene er adskilt fra tresturkturen slik at varetypene kan plasseres hvor som helst i strukturen.
+ -> En tabell VAREPLASSERING inneholder (id, trestruktur, navn). Tabellen VARETYPER inneholder(id, mal, navn).
  
 2. En varetype velges
- - vis alle mulige deler for varetypen[valgliste] (kun to nivåer: Varetype -> deler => fyll inn egenskaper) - ikke avhengig av trestruktur for å FINNE varetype.
+ - vis faktalinjer + de deler som varen kan bestå av 
+ - huk av for de aktuelle deler
+ - vis faktalinjer for disse
+ - fyll inn
+ - lagre.
+ 
+ VAREGRUPPER
+ id
+ navn
+ plassering (../..../....)
+ rekkefølge
+ 
+ VAREGRUPPE_SINE_VARETYPER 
+ gruppe_id
+ vare_id
+ vare_rekkefølge
+ 
+ ENUM_VARETYPER
+ id
+ navn
+ mal_id
+ deler_id
+ 
+ VARETYPE_SINE_DELER
+ deler_id 
+ varedype_id (sine deler)
+ 
+ ENUM_MAL
+ mal_id
+ navn
+ 
+ MAL_SINE_FAKTALINJER
+ mal_id
+ faktalinje_id 
+ faktalinje_rekkefølge
+ 
+ ENUM_FAKTALINJE
+ id
+ type
+ typeNavn
+ defaultVerdi
  
 3. Velg de deler som skal videreselges 
  - vis de nødvendige faktalinjer.
