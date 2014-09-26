@@ -1,0 +1,22 @@
+ ta i bruk Spring
+ ta i bruk HSQLDB
+ Opprett tabeller: 
+ 
+ ENUM_VAREGRUPPER
+ ENUM_VARETYPER
+ ENUM_DELER (andre varetyper)
+ ENUM_MALER
+ ENUM_FAKTALINJER
+ 
+VAREGRUPPE_SINE_VARETYPER 
+VARETYPE_SINE_DELER
+DEL_SINE_DELER, DEL_SIN_MAL
+MAL_SINE_FAKTALINJER
+
+
+ lag noe java 
+ 
+ 
+ -------------------------------------------
+ done
+ -------------------------------------------
