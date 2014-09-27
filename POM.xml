@@ -1,4 +1,4 @@
-<project>
+ï»¿<project>
   <!-- model version is always 4.0.0 for Maven 2.x POMs -->
   <modelVersion>4.0.0</modelVersion>
  
@@ -8,25 +8,22 @@
   <artifactId>deler</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   
-  <name>Lager</name>
-  <description>Håndtering av deler</description>
+  <name>Deler</name>
+  <description>HÃ¥ndtering av deler</description>
   
   <!-- Dette er en (parent)pom og ikke et prosjekt med kode. -->
   <!-- Children ref til 'parent' er parents project coordinates.  -->
-  <!-- version og groupId(arves) kun artifactId må oppgis-->
+  <!-- version og groupId arves, kun artifactId mÃ¥ oppgis-->
   <packaging>pom</packaging>
  
   <!-- properties som kan brukes i andre pommer slik: ${thing.prop} -->
   <properties>
 	<thing.prop>value</thing.prop>
-	<project.version>0.0.1-SNAPSHOT</project.version>
-
   </properties>
  
-  <!-- Moduler som også skal være med i bygget -->
+  <!-- Moduler som ogsÃ¥ skal vÃ¦re med i bygget -->
   <modules>
 	<module>maler</module>
-
   </modules>
   
   <!-- library dependencies -->
@@ -43,11 +40,13 @@
     </dependency>
   </dependencies>
   
-  <!-- Bygging av appen med Maven-->
+  <!-- Bygging av appen -->
   <build>
     <plugins>
   
-	  <!-- Hvilken kompilator som skal brukes (default 1.3) -->
+	  <!-- Hvilken kompilator som skal brukes (default 1.3)
+			Hva inneholder eclipse-plugin: mvn eclipse:help -Ddetail=true -Dgoal=<goalname>
+	  -->
 	  <plugin>
 		<version>3.1</version>		
         <!-- <groupId>org.apache.maven.plugins</groupId> -->
@@ -55,7 +54,7 @@
         <configuration>         
 		  <source>1.7</source>
           <target>1.7</target>
-        </configuration>		
+        </configuration>
       </plugin>
 	  
 	  <!-- Eclipse oppsett -->	  
@@ -68,12 +67,11 @@
             <sourceExclude>**/.git/**</sourceExclude>
           </sourceExcludes>
           <sourceIncludes>
-            <!-- <sourceInclude>**/*.myExtension</sourceInclude> -->
+            <sourceInclude>**/*.myExtension</sourceInclude>
           </sourceIncludes>
         </configuration>
       </plugin>
 	  
     </plugins>
-    <finalName>superPOM: Final name</finalName>	
   </build>
 </project>
