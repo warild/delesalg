@@ -1,7 +1,8 @@
  ta i bruk Spring
- ta i bruk HSQLDB
- Opprett tabeller: 
+ ta i bruk HSQLDB eller H2
+ javaFX hvordan med Java7
  
+ Opprett tabeller: 
  ENUM_VAREGRUPPER
  ENUM_VARETYPER
  ENUM_DELER (andre varetyper)

@@ -3,13 +3,13 @@
   
   <parent>
     <groupId>no.onlevel</groupId>
-    <artifactId>maler</artifactId>
+    <artifactId>deler</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
   
   <groupId>no.onlevel</groupId>
-  <artifactId>api-mal-lager-facade</artifactId>
-  <name>- - api: Facade</name>
+  <artifactId>_application</artifactId>
+  <name>Om applikasjonen</name>
   <description>api for malfacade</description>
 
 </project>
