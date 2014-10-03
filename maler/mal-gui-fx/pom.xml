@@ -1,0 +1,20 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<!-- model version is always 4.0.0 for Maven 2.x POMs -->
+	<modelVersion>4.0.0</modelVersion>
+  
+	<!-- project coordinates, i.e. a group of values which uniquely identify this project -->
+	<name>Gui for maler</name>
+	<description>Gui for malene</description>
+	<groupId>no.onlevel</groupId>
+	<artifactId>mal-gui-fx</artifactId>
+	  <!-- Dette er en (parent) pom og ikke pom til et prosjekt med kode. -->
+	<packaging>jar</packaging>
+  
+  <parent>
+    <groupId>no.onlevel</groupId>
+    <artifactId>maler</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+  </parent>
+  
+  
+</project>

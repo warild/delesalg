@@ -11,20 +11,22 @@
   <name>Deler</name>
   <description>Håndtering av deler</description>
   
-  <!-- Dette er en (parent)pom og ikke et prosjekt med kode. -->
-  <!-- Children ref til 'parent' er parents project coordinates.  -->
-  <!-- version og groupId arves, kun artifactId må oppgis-->
+  <!-- Dette er en (parent) pom og ikke pom til et prosjekt med kode. -->
   <packaging>pom</packaging>
  
+   <!-- Children ref til 'parent' er parents project coordinates.  -->
+  <!-- version og groupId arves, kun artifactId må oppgis-->
+
+  <!-- Moduler som også skal være med i bygget -->
+  <modules>
+	<module>maler</module>
+	<module>deler</module>
+  </modules>
+
   <!-- properties som kan brukes i andre pommer slik: ${thing.prop} -->
   <properties>
 	<thing.prop>value</thing.prop>
   </properties>
- 
-  <!-- Moduler som også skal være med i bygget -->
-  <modules>
-	<module>maler</module>
-  </modules>
   
   <!-- library dependencies -->
   <dependencies>

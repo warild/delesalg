@@ -1,4 +1,4 @@
-package no.onlevel.deler.mal.api;
+package no.delesalg.maler.gui;
 
 import java.util.List;
 

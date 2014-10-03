@@ -1,16 +1,33 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <!-- model version is always 4.0.0 for Maven 2.x POMs -->
   <modelVersion>4.0.0</modelVersion>
   
-  <parent>
-    <groupId>no.onlevel</groupId>
-    <artifactId>deler</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
-  </parent>
-  
+    <!-- project coordinates, i.e. a group of values which uniquely identify this project -->
   <groupId>no.onlevel</groupId>
+    <!-- prosjekt mappe (modul)  jar-navn -->
   <artifactId>maler</artifactId>
   <name>Maler:</name>
   <description>Inneholder prosjekter knyttet til vedlikehold av malene</description>
 
   <packaging>pom</packaging>
+  
+  <!-- Parent: avhengig av at andre prosjekter bygges?? properties??-->
+    <parent>
+    <groupId>no.onlevel</groupId>
+    <artifactId>deler</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+  </parent>
+
+    <!-- Moduler som også skal være med i bygget -->
+  <modules>
+	<module>mal-gui-fx</module>
+	 <!-- 
+	<module>mal-facade</module>
+	<module>mal-facade-api</module>
+	<module>mal-service</module>
+	<module>mal-repo-api</module>
+	<module>mal-repo</module>
+	 -->
+  </modules>
+  
 </project>
