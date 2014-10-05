@@ -1,6 +1,13 @@
+Hvis lokal branch (fx 'master') ikke er attached til remote. Gjør følgende:
+Opprett ny gren(=branch) - slett den gamle.
+Ev prøv hvis mendingen er '..detached..'
+git push --set-upstream origin master
+
+
 ================================================
 Lag repo
 ================================================
+
 ------------------------------------------------
 Opprett et git-repo. 
 ------------------------------------------------
