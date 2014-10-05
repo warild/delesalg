@@ -1,0 +1,26 @@
+DDD
+Application level
+Domain level
+
+Repository level
+Database
+
+Entities
+Value Objects
+
+DOMAIN -> Domain MODEL 
+(avbilder en tilstrekkelig del av domenet)->
+CONTEXT for modell - hvabruker 
+ skal modellen inneholde/ikke inneholde - grenser.
+BOUNDED CONTEXT
+---
+
+klient kaller
+applicationservice (facade) som kaller
+service eller 
+repo som kaller 
+db og bruker
+factory til å opprette
+aggregat som inneholder
+entitet og 
+value object
