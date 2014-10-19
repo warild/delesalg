@@ -3,12 +3,12 @@
   <modelVersion>4.0.0</modelVersion>
  
   <!-- project coordinates, i.e. a group of values which uniquely identify this project -->
-  <groupId>no.onlevel</groupId>
+  <groupId>no.delesalg</groupId>
   <!-- prosjekt mappe (modul)  jar-navn -->
-  <artifactId>deler</artifactId>
+  <artifactId>delesalg</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   
-  <name>Deler</name>
+  <name>Delesalg</name>
   <description>Håndtering av deler</description>
   
   <!-- Dette er en (parent) pom og ikke pom til et prosjekt med kode. -->
@@ -20,7 +20,7 @@
   <!-- Moduler som også skal være med i bygget -->
   <modules>
 	<module>maler</module>
-	<module>deler</module>
+	<!-- module>deler</module-->
   </modules>
 
   <!-- properties som kan brukes i andre pommer slik: ${thing.prop} -->
@@ -30,8 +30,14 @@
   
   <!-- library dependencies -->
   <dependencies>
+	<dependency>
+		<groupId>org.hsqldb</groupId>
+		<artifactId>hsqldb</artifactId>
+		<version>2.3.2</version>
+	</dependency>
+
+
     <dependency>
- 
       <!-- coordinates of the required library -->
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
