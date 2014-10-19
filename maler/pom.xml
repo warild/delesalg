@@ -3,24 +3,24 @@
   <modelVersion>4.0.0</modelVersion>
   
     <!-- project coordinates, i.e. a group of values which uniquely identify this project -->
-  <groupId>no.onlevel</groupId>
+  <groupId>no.delesalg</groupId>
     <!-- prosjekt mappe (modul)  jar-navn -->
   <artifactId>maler</artifactId>
   <name>Maler:</name>
   <description>Inneholder prosjekter knyttet til vedlikehold av malene</description>
-
   <packaging>pom</packaging>
   
   <!-- Parent: avhengig av at andre prosjekter bygges?? properties??-->
     <parent>
-    <groupId>no.onlevel</groupId>
-    <artifactId>deler</artifactId>
+    <groupId>no.delesalg</groupId>
+    <artifactId>delesalg</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
 
     <!-- Moduler som også skal være med i bygget -->
   <modules>
 	<module>mal-gui-fx</module>
+	<module>mal-facade-api</module>
 	 <!-- 
 	<module>mal-facade</module>
 	<module>mal-facade-api</module>

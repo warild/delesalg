@@ -3,12 +3,12 @@
   
   <parent>
     <groupId>no.onlevel</groupId>
-    <artifactId>deler</artifactId>
+    <artifactId>maler</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
   
   <groupId>no.onlevel</groupId>
-  <artifactId>mal-facade</artifactId>
+  <artifactId>mal-facade-api</artifactId>
   <name>Maler: Facade-API</name>
   <description>Api for facaden til Maler</description>
 

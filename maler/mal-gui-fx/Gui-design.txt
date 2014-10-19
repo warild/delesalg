@@ -1,0 +1,17 @@
+---------------------------------------------
+Endre verdier:
+---------------------------------------------
+Velg verdi å Slette-endre-legge til
+VAREGRUPPE_TYPER
+VARE_TYPER
+MAL_TYPER
+FAKTALINJE_TYPER
+
+LAGER_TYPER
+
+SELGER_TYPER
+
+
+
+
+Kople sammen verdier
