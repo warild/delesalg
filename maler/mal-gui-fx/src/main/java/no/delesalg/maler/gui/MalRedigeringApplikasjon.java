@@ -23,7 +23,7 @@ import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 /** 
- * Gui for håndtering av maler
+ * Gui for håndtering av maler. Malene lagre som xml-filer. Enkelt å bytte ut filer.
  *
  */
 public class MalRedigeringApplikasjon extends Application {
@@ -67,35 +67,60 @@ public class MalRedigeringApplikasjon extends Application {
        * 
        */
 	@Override
+	
+	// Vindu = Stage
 	public void start(Stage stage) throws Exception {
-		 stage.setTitle("Varelager");
+		 
+/*
+		  HBox og VBox - legger ut elementene horisontalt (x-dimensjonen, dvs. bortover) eller vertikalt (y-dimensjonen, dvs. nedover) og gjør dem like store i den andre dimensjonen.
+		  TilePane     - plasserer elementene i et rutenett, TilePane gjør alle ruten like store 
+		  GridPane     - plasserer elementene i et rutenett, GridPane er mer fleksibel.
+		  BorderPane   - fordeler elementene i regioner, midten (for hovedinnholdet), top, bunn, venstre og høyre, og passer for hovedinnholdet i applikasjonen.
+		  AnchorPane   - henger elementene fast i punkter knyttet til en eller flere av sidene
+		  Pane         - generell container uten spesifikk layout, så posisjonen på elementer må settes manuelt.
+*/		 
 
+		 // 1. opprett alle kontroller
+		 // tittel
+		 Text title = new Text("Welcome");
+		 title.setFont(Font.font("Tahoma", FontWeight.NORMAL, 20));		 
+		 
+		 // brukernavnText
+		 Label userNameText = new Label("User Name:");		 
+		 // brukernavnInput
+		 TextField userNameInput = new TextField();
+		 		 
+		 // passordText
+		 Label passwordText = new Label("Password:");		 
+		 // passordInput
+		 PasswordField passwordInput = new PasswordField();
+		 
+		 // 2. Sett opp punkter til å feste kontrollene på
 		 GridPane grid = new GridPane();
 		 grid.setAlignment(Pos.CENTER);
-		 grid.setHgap(10);
-		 grid.setVgap(10);
-		 grid.setPadding(new Insets(25, 25, 25, 25));
-
-		 Scene scene = new Scene(grid, 300, 275);
-		 stage.setScene(scene);
-
-		 Text scenetitle = new Text("Welcome");
-		 scenetitle.setFont(Font.font("Tahoma", FontWeight.NORMAL, 20));
-		 grid.add(scenetitle, 0, 0, 2, 1);
-
-		 Label userName = new Label("User Name:");
-		 grid.add(userName, 0, 1);
-
-		 TextField userTextField = new TextField();
-		 grid.add(userTextField, 1, 1);
-
-		 Label pw = new Label("Password:");
-		 grid.add(pw, 0, 2);
-
-		 PasswordField pwBox = new PasswordField();
-		 grid.add(pwBox, 1, 2);
-		
-
+		 grid.setHgap(10);  // horisontal avstand mellom punkter
+		 grid.setVgap(10);  // vertikal avstand mellom punkter
+		 grid.setPadding(new Insets(10, 10, 10, 10));  // Padding fra de fire sider
+		 
+		 // 3. fest kontrollene
+		 					 //kol, rad
+		 grid.add(title,         0, 0);
+		 grid.add(userNameText,  1, 1); 
+		 grid.add(userNameInput, 2, 2); 
+		 grid.add(passwordText,  3, 3);
+		 grid.add(passwordInput, 4, 4);
+		 
+		 // 4. sett opphengte kontroller inn i en scene (=del av vindu)
+		 // Scene = vindusinnhold
+		 Scene scene = new Scene(grid, 500, 200);  // vindusInnhold(bredd, høyde)
+		 
+		 // 5. sett scene(r) inn i vindu
+		 // Vindu
+		 stage.setScene(scene);  // Vindusinnhold -> vindu
+		 stage.setTitle("Varelager");
+         stage.show(); // vis
+		 
+		 //------------
 	            rootNode.setExpanded(true);
 	            for (Employee employee : employees) {
 	                TreeItem<String> empLeaf = new TreeItem<String>(employee.getName());
@@ -125,8 +150,9 @@ public class MalRedigeringApplikasjon extends Application {
 	            TreeView<String> treeView = new TreeView<String>(rootNode);
 	            
 	            box.getChildren().add(treeView);
-	            stage.setScene(scene);
-	            stage.show();
+	            
+	            
+	            
 	        }
 	     
 	        public static class Employee {

@@ -8,10 +8,19 @@ Opprette mal.
 kople faktalinjer til mal.
 Opprette faktalinjer
 
+
+-- mal for innkjøp
 VAREGRUPPE_TYPER
-VARE_TYPER
-MAL_TYPER
+hovedmal for innkjøpt vare -> vis
+
+velg deler:
+
+-- mal for deler som skal selges
+VARE_TYPER -> volvo -> LF400
+MAL_TYPER -> mal for del
 FAKTALINJE_TYPER
+
+
 
 VAREGRUPPE_OM
 VARE_OM
