@@ -31,39 +31,10 @@ public class MalRedigeringApplikasjon extends Application {
 		launch(MalRedigeringApplikasjon.class, args);		
 	}
 
-
-    
-    private final Node rootIcon = new ImageView();
-
-        List<Employee> employees = Arrays.<Employee>asList(
-                new Employee("Ethan Williams", "Sales Department"),
-                new Employee("Emma Jones", "Sales Department"),
-                new Employee("Michael Brown", "Sales Department"),
-                new Employee("Anna Black", "Sales Department"),
-                new Employee("Rodger York", "Sales Department"),
-                new Employee("Susan Collins", "Sales Department"),
-                new Employee("Mike Graham", "IT Support"),
-                new Employee("Judy Mayer", "IT Support"),
-                new Employee("Gregory Smith", "IT Support"),
-                new Employee("Jacob Smith", "Accounts Department"),
-                new Employee("Isabella Johnson", "Accounts Department"));
-        TreeItem<String> rootNode = 
-            new TreeItem<String>("MyCompany Human Resources", rootIcon);
-
-        
       /* 
        * Stage = window
        * Scene = container: inneholder scener eller controller som skal vises
        * Node = controller = scene
-       * 
-  HBox og VBox - legger ut elementene horisontalt (x-dimensjonen, dvs. bortover) eller vertikalt (y-dimensjonen, dvs. nedover) og gjør dem like store i den andre dimensjonen.
-  TilePane   - plasserer elementene i et rutenett, TilePane gjør alle ruten like store 
-  GridPane    - plasserer elementene i et rutenett, GridPane er mer fleksibel.
-  BorderPane - fordeler elementene i regioner, midten (for hovedinnholdet), top, bunn, venstre og høyre, og passer for hovedinnholdet i applikasjonen.
-  AnchorPane - henger elementene fast i punkter knyttet til en eller flere av sidene
-  Pane - generell container uten spesifikk layout, så posisjonen på elementer må settes manuelt.
- 
-       * 
        * 
        */
 	@Override
@@ -121,6 +92,7 @@ public class MalRedigeringApplikasjon extends Application {
          stage.show(); // vis
 		 
 		 //------------
+         
 	            rootNode.setExpanded(true);
 	            for (Employee employee : employees) {
 	                TreeItem<String> empLeaf = new TreeItem<String>(employee.getName());
@@ -155,6 +127,24 @@ public class MalRedigeringApplikasjon extends Application {
 	            
 	        }
 	     
+    private final Node rootIcon = new ImageView();
+
+    List<Employee> employees = Arrays.<Employee>asList(
+            new Employee("Ethan Williams", "Sales Department"),
+            new Employee("Emma Jones", "Sales Department"),
+            new Employee("Michael Brown", "Sales Department"),
+            new Employee("Anna Black", "Sales Department"),
+            new Employee("Rodger York", "Sales Department"),
+            new Employee("Susan Collins", "Sales Department"),
+            new Employee("Mike Graham", "IT Support"),
+            new Employee("Judy Mayer", "IT Support"),
+            new Employee("Gregory Smith", "IT Support"),
+            new Employee("Jacob Smith", "Accounts Department"),
+            new Employee("Isabella Johnson", "Accounts Department"));
+    TreeItem<String> rootNode = 
+        new TreeItem<String>("MyCompany Human Resources", rootIcon);
+	
+	
 	        public static class Employee {
 	     
 	            private final SimpleStringProperty name;
