@@ -1,0 +1,11 @@
+There can only be one controller per FXML-file
+
+single responsibility
+
+
+and it should be declared in the top level element. 
+I made two FXML's, one that represents the main screen and one that acts as the 
+menu bar. 
+You probably want a division of your logic in multiple controllers, 
+rather then stuffing to much in a single controller – 
+single responsibility is a good design guideline
