@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.canvas.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.shape.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane layoutX="20.0" layoutY="5.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="699.0" prefWidth="939.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="no.onlevel.deler.gui.controller.FinnController">
+	<children>
+		<TableView fx:id="selgerTabell" layoutX="413.0" layoutY="102.0" prefHeight="239.0" prefWidth="220.0">
+			<contextMenu>
+				<ContextMenu>
+					<items>
+						<MenuItem mnemonicParsing="false" text="Solgt - til" />
+						<MenuItem mnemonicParsing="false" text="Sjekk status" />
+					</items>
+				</ContextMenu>
+			</contextMenu>
+		</TableView>
+		<Label id="testLabel" fx:id="testLabel" layoutX="821.0" layoutY="30.0" text="test" />
+		<Label id="temaTittel" fx:id="temaTittel" layoutX="35.0" layoutY="19.0" text="Søk etter del">
+			<font>
+				<Font name="Verdana" size="18.0" />
+			</font>
+		</Label>
+		<CheckBox layoutX="257.0" layoutY="22.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="246.0" text="Vis også de som er solgt  - siste 3 mnd" />
+		<Label id="vv" layoutX="35.0" layoutY="88.0" text="1. Velg varetype" />
+		<Label id="vv" layoutX="221.0" layoutY="88.0" text="2. Velg merke" />
+		<TreeView id="varetyper" fx:id="varetyper1" layoutX="221.0" layoutY="102.0" prefHeight="422.0" prefWidth="165.0" />
+		<TreeView id="varetyper" fx:id="varetyper" layoutX="35.0" layoutY="102.0" prefHeight="422.0" prefWidth="165.0">
+			<contextMenu>
+				<ContextMenu>
+					<items>
+						<MenuItem mnemonicParsing="false" text="Legg til varetype" />
+						<MenuItem mnemonicParsing="false" text="Slett varetype" />
+						<MenuItem mnemonicParsing="false" text="Endre navn på varetype" />
+					</items>
+				</ContextMenu>
+			</contextMenu>
+		</TreeView>
+	</children>
+</Pane>

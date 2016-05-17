@@ -1,0 +1,20 @@
+<TabPane >
+    <tabs>
+        <Tab text="Untitled Tab 1">
+            <content>
+                <fx:include fx:id="sok" source="deler_sok.fxml"/>
+            </content>
+        </Tab>
+        <Tab text="Untitled Tab 2">
+            <content>
+                <fx:include fx:id="registrer" source="deler_registrer.fxml"/>
+            </content>
+        </Tab>
+        <Tab text="Untitled Tab 2">
+            <content>
+                <fx:include fx:id="rapport" source="deler_rapporter.fxml"/>
+            </content>
+        </Tab>
+        
+    </tabs>
+</TabPane>

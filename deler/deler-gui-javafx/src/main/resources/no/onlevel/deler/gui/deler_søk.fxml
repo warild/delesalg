@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.canvas.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.shape.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="699.0" prefWidth="939.0" style="-fx-border-width: ;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="no.onlevel.deler.gui.controller.DelerController">
+   <children>
+      <VBox fx:id="menypanel" layoutX="-1.0" prefHeight="691.0" prefWidth="939.0">
+         <children>
+            <MenuBar prefHeight="25.0" prefWidth="933.0">
+              <menus>
+                <Menu mnemonicParsing="false" text="File">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Close" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Edit">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Delete" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="About" />
+                  </items>
+                </Menu>
+                  <Menu mnemonicParsing="false" text="Administrasjon">
+                    <items>
+                      <MenuItem mnemonicParsing="false" text="Varetype" />
+                        <MenuItem mnemonicParsing="false" text="Merker" />
+                        <MenuItem mnemonicParsing="false" text="Unspecified Action" />
+                    </items>
+                  </Menu>
+              </menus>
+            </MenuBar>
+            <ToolBar prefHeight="56.0" prefWidth="939.0" style="-fx-background-color: linear-gradient(#eee 10%, #aaa 100%),  linear-gradient(#eee 10%, #bbb 100%);">
+              <items>
+                <Button fx:id="registrerInnkjopKnapp" mnemonicParsing="false" prefHeight="42.0" prefWidth="189.0" text="Registrer nytt innkjøp" />
+                <Button mnemonicParsing="false" prefHeight="42.0" prefWidth="189.0" text="Søk etter del" />
+                <Button mnemonicParsing="false" prefHeight="43.0" prefWidth="197.0" text="Rapport" />
+              </items>
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+            </ToolBar>
+            <Pane prefHeight="572.0" prefWidth="918.0">
+               <children>
+                  <TableView fx:id="selgerTabell" layoutX="459.0" layoutY="87.0" prefHeight="239.0" prefWidth="220.0">
+                     <contextMenu>
+                        <ContextMenu>
+                           <items>
+                              <MenuItem mnemonicParsing="false" text="Solgt - til" />
+                              <MenuItem mnemonicParsing="false" text="Sjekk status" />
+                           </items>
+                        </ContextMenu>
+                     </contextMenu>
+                  </TableView>
+                  <Label id="testLabel" fx:id="testLabel" layoutX="821.0" layoutY="30.0" text="test" />
+                  <Label id="temaTittel" fx:id="temaTittel" layoutX="28.0" layoutY="17.0" text="Søk etter del">
+                     <font>
+                        <Font name="Verdana" size="18.0" />
+                     </font>
+                  </Label>
+                  <CheckBox layoutX="180.0" layoutY="20.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="246.0" text="Vis også de som er solgt  - siste 3 mnd" />
+                  <Label id="vv" layoutX="28.0" layoutY="70.0" text="1. Velg varetype" />
+                  <Label id="vv" layoutX="208.0" layoutY="70.0" text="2. Velg merke" />
+                  <TreeView id="varetyper" fx:id="varetyper1" layoutX="208.0" layoutY="87.0" prefHeight="422.0" prefWidth="165.0" />
+                  <TreeView id="varetyper" fx:id="varetyper" layoutX="28.0" layoutY="87.0" prefHeight="422.0" prefWidth="165.0">
+                     <contextMenu>
+                        <ContextMenu>
+                           <items>
+                              <MenuItem mnemonicParsing="false" text="Legg til varetype" />
+                              <MenuItem mnemonicParsing="false" text="Slett varetype" />
+                              <MenuItem mnemonicParsing="false" text="Endre navn på varetype" />
+                           </items>
+                        </ContextMenu>
+                     </contextMenu>
+                  </TreeView>
+               </children>
+            </Pane>
+         </children>
+      </VBox>
+   </children>
+</Pane>

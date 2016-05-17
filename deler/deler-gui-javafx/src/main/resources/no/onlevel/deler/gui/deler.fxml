@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.canvas.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.shape.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="699.0" prefWidth="939.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="no.onlevel.deler.gui.controller.FinnController">
+   <children>      
+      <TreeView id="varetyper" fx:id="varetyper" layoutX="32.0" layoutY="203.0" prefHeight="422.0" prefWidth="129.0" />
+      <Label id="temaTittel" fx:id="temaTittel" layoutX="26.0" layoutY="116.0" text="Registrer innkjøp">
+         <font>
+            <Font name="Verdana" size="18.0" />
+         </font>
+      </Label>
+      <Label id="vv" layoutX="32.0" layoutY="186.0" text="1. Velg varetype" />
+      <Button layoutX="558.0" layoutY="14.0" mnemonicParsing="false" prefHeight="81.0" prefWidth="212.0" text="Rapporter" />
+      <Label id="testLabel" fx:id="testLabel" layoutX="740.0" layoutY="601.0" text="test" />
+      <TableView fx:id="identifikasjonTabell" layoutX="181.0" layoutY="203.0" prefHeight="125.0" prefWidth="305.0" />
+      <TableView fx:id="egenskaperTabell" layoutX="652.0" layoutY="203.0" prefHeight="125.0" prefWidth="265.0" />
+      <TableView fx:id="selgerTabell" layoutX="181.0" layoutY="345.0" prefHeight="125.0" prefWidth="305.0" />
+      <Label layoutX="186.0" layoutY="328.0" text="3. Selger" />
+      <Label layoutX="184.0" layoutY="186.0" text="2. Identifisering av innkjøp" />
+      <Label layoutX="652.0" layoutY="186.0" text="5. Egenskaper ved deler som kan selges" />
+      <TreeView id="checkboxTreeView" fx:id="checkboxTreeView" layoutX="504.0" layoutY="202.0" prefHeight="422.0" prefWidth="129.0" />
+      <Label layoutX="504.0" layoutY="186.0" text="4. Deler som kan selges" />
+   </children>
+</Pane>

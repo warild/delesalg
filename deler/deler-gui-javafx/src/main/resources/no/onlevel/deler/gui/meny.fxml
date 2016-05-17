@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.canvas.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.shape.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane fx:id="side" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="699.0" prefWidth="939.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="no.onlevel.deler.gui.controller.MenyController">
+	<children>
+		<VBox fx:id="menypanel" layoutX="-1.0" prefHeight="110.0" prefWidth="939.0">
+			<children>
+				<MenuBar prefHeight="25.0" prefWidth="933.0">
+					<menus>
+						<Menu mnemonicParsing="false" text="File">
+							<items>
+								<MenuItem mnemonicParsing="false" text="Close" />
+							</items>
+						</Menu>
+						<Menu mnemonicParsing="false" text="Edit">
+							<items>
+								<MenuItem mnemonicParsing="false" text="Delete" />
+							</items>
+						</Menu>
+						<Menu mnemonicParsing="false" text="Help">
+							<items>
+								<MenuItem mnemonicParsing="false" text="About" />
+							</items>
+						</Menu>
+						<Menu mnemonicParsing="false" text="Administrasjon">
+							<items>
+								<MenuItem mnemonicParsing="false" text="Varetype" />
+								<MenuItem mnemonicParsing="false" text="Merker" />
+								<MenuItem mnemonicParsing="false" text="Unspecified Action" />
+							</items>
+						</Menu>
+					</menus>
+				</MenuBar>
+				<ToolBar prefHeight="58.0" prefWidth="819.0" style="-fx-background-color: linear-gradient(#eee 10%, #aaa 100%),  linear-gradient(#eee 10%, #bbb 100%);">
+					<items>
+						<Button fx:id="registrerInnkjop" alignment="BOTTOM_LEFT" mnemonicParsing="false" prefHeight="42.0" prefWidth="189.0" text="Registrer nytt innkjøp" />
+						<Button fx:id="finnDel" mnemonicParsing="false" prefHeight="42.0" prefWidth="189.0" text="Søk etter del" />
+						<Button fx:id="rapporter" mnemonicParsing="false" prefHeight="43.0" prefWidth="197.0" text="Rapport" />
+					</items>
+					<padding>
+						<Insets left="20.0" />
+					</padding>
+				</ToolBar>
+			</children>
+		</VBox>
+		<Pane fx:id="innhold" layoutX="0.0" layoutY="80.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="699.0" prefWidth="939.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+		</Pane>  
+	</children>
+</Pane>

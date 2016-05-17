@@ -47,49 +47,9 @@ import no.onlevel.deler.gui.controller.TreeTableViewSample.Employee;
  * //https://blogs.oracle.com/acaicedo/entry/managing_multiple_screens_in_javafx1
  *
  */
-public class DelerController extends Application {
+public class FinnController {
 
-	//main
-	// ser alltid under resources...
-	private static final String FXML = "/no/onlevel/deler/gui/deler_søk.fxml"; 
-	
-	public static void main(String[] args) {
-		launch(args); // returnerer når applikasjonen avsluttes
-	}
 
-	
-//	private Stage primaryStage;
-	
-	// setup
-	@Override
-	public void start(Stage forestilling) {
-		// .init() kjøres før .start()
-
-		FXMLLoader sceneLoader = new FXMLLoader();
-		sceneLoader.setLocation(DelerController.class.getResource(FXML));
-		try {
-			deleSalg = (Pane) sceneLoader.load();
-		} catch (IOException e) {
-			
-			e.printStackTrace();
-		}
-
-		// Show the scene containing the layout.
-
-//		this.primaryStage = forestilling;
-//		this.primaryStage.setTitle("Deler");
-
-		forestilling.setScene(new Scene(deleSalg));
-		forestilling.show();
-
-		// Spring
-		// ApplicationContext context = new
-		// AnnotationConfigApplicationContext(CustomerAppConfiguration.class);
-		// ScreensConfiguration screens =
-		// context.getBean(ScreensConfiguration.class);
-		// screens.setPrimaryStage(stage);
-		// screens.loginDialog().show();
-	}
 
 	// @FXML knytter controller i .fxml-fila til variabler i controller
 	// Dermed er controller knyttet tett på gui og kontroller kan gjøre mye
@@ -104,14 +64,6 @@ public class DelerController extends Application {
 	@FXML
 	private Pane deleSalg;
 
-	@FXML
-	private Button registrerInnkjopKnapp;
-
-	@FXML
-	private Button sokDel;
-
-	@FXML
-	private Button registrerSalg;
 
 	@FXML
 	private Label temaTittel;
@@ -129,26 +81,15 @@ public class DelerController extends Application {
 	private Label testLabel;
 
 	
-	@Override
-	public void init() {
-		// start db
-	}
 
-	@Override
-	public void stop() {
-		// stop db
-	}
 
 	// populate
 	@FXML
 	public void initialize() {
 		
 		
-		Image nyRegistreringIkon = new Image(getClass().getResourceAsStream("/Nyregistrering.png"));		
-		registrerInnkjopKnapp.setGraphic(new ImageView(nyRegistreringIkon));
-		registrerInnkjopKnapp.setAlignment(Pos.BASELINE_LEFT);
-		
-		
+
+	
 		varetyper.addEventHandler(MouseEvent.MOUSE_CLICKED, mouseEventHandle);
 
 		TreeItem<TreeItemInnkommet> root = new TreeItem<TreeItemInnkommet>(new TreeItemInnkommet("id1", "Velg en vare"));
@@ -263,13 +204,7 @@ public class DelerController extends Application {
 
 	};
 
-	@FXML
-	public void registrerInnkjop(ActionEvent a) {
-		registrerInnkjopKnapp.setTooltip(new Tooltip("Tooltipppp"));
-		temaTittel.setText("Test---");
-		System.out.println("console OP");
 
-	}
 
 	//------
     public static class Egenskap {

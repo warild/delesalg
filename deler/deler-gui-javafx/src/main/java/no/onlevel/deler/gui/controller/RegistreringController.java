@@ -47,11 +47,11 @@ import no.onlevel.deler.gui.controller.TreeTableViewSample.Employee;
  * //https://blogs.oracle.com/acaicedo/entry/managing_multiple_screens_in_javafx1
  *
  */
-public class DelerController extends Application {
+public class RegistreringController extends Application {
 
 	//main
 	// ser alltid under resources...
-	private static final String FXML = "/no/onlevel/deler/gui/deler_søk.fxml"; 
+	private static final String FXML = "/no/onlevel/deler/gui/registrering.fxml"; 
 	
 	public static void main(String[] args) {
 		launch(args); // returnerer når applikasjonen avsluttes
@@ -66,7 +66,7 @@ public class DelerController extends Application {
 		// .init() kjøres før .start()
 
 		FXMLLoader sceneLoader = new FXMLLoader();
-		sceneLoader.setLocation(DelerController.class.getResource(FXML));
+		sceneLoader.setLocation(RegistreringController.class.getResource(FXML));
 		try {
 			deleSalg = (Pane) sceneLoader.load();
 		} catch (IOException e) {
@@ -144,9 +144,7 @@ public class DelerController extends Application {
 	public void initialize() {
 		
 		
-		Image nyRegistreringIkon = new Image(getClass().getResourceAsStream("/Nyregistrering.png"));		
-		registrerInnkjopKnapp.setGraphic(new ImageView(nyRegistreringIkon));
-		registrerInnkjopKnapp.setAlignment(Pos.BASELINE_LEFT);
+
 		
 		
 		varetyper.addEventHandler(MouseEvent.MOUSE_CLICKED, mouseEventHandle);

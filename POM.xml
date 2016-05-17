@@ -94,8 +94,7 @@
 			<!-- Bygg executable JAR -->
 			<plugin>
 				<!-- <groupId>org.apache.maven.plugins</groupId> => default -->
-				<artifactId>maven-assembly-plugin</artifactId>
-				<version>${maven-assembly.version}</version>				
+				<artifactId>maven-assembly-plugin</artifactId>			
 				<configuration>
 					<descriptorRefs>
 						<!-- bygg som jar, zip, src, ...   -->
@@ -103,7 +102,7 @@
 					</descriptorRefs>
 					<archive>
 						<manifest>
-							<mainClass>no.onlevel.delesalg.DelerController</mainClass>
+							<mainClass>no.onlevel.deler.gui.controller.DelerController</mainClass>
 						</manifest>
 					</archive>
 				</configuration>
