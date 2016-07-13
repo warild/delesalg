@@ -1,0 +1,12 @@
+INNKOMMET - SELGES VIDER SOM - salgsdeler
+lastebil  - lastebil 
+          - delebil   - karosseri - hytte, stoler, spoiler, grill, solskjerm ...
+                      - drivverk  - motor,motor-deler, gearkasse, mellomaksel, differansial,retarder, aksler, styresnekke
+          - påbygg    - plan, kran, skap, kjøl/frys, sving, hengerfeste, hydraulikk 
+          - tilbehør  - dekk, dekk på felg, felg 
+          - henger    - 2/4 hjul, skap, 
+ -> 
+ 
+ 
+ innkommet -> varegrupper - varer
+ oppdeling -> delegrupper - deler

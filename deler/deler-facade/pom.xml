@@ -9,7 +9,6 @@
 	</parent>
 
 	<name>-   Facade</name>
-	<groupId>no.onlevel</groupId> 
 	<artifactId>deler-facade</artifactId>
 	<version>{$project.version}</version>	
 	<packaging>jar</packaging>

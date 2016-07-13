@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.canvas.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.shape.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" nodeOrientation="LEFT_TO_RIGHT" prefHeight="606.0" prefWidth="1124.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="no.onlevel.deler.gui.controller.AdminController">
+	<children>
+		<Label id="temaTittel" fx:id="temaTittel" layoutX="602.0" layoutY="440.0" text="Vedlikehold av varegrupper">
+			<font>
+				<Font name="Verdana" size="18.0" />
+			</font>
+		</Label>
+		<Label id="vv" layoutX="14.0" layoutY="53.0" text="Varegruppe &lt;-&gt; varer" />
+		<Label id="testLabel" fx:id="testLabel" layoutX="876.0" layoutY="405.0" text="test" />
+      <Label id="vv" layoutX="238.0" layoutY="53.0" text="Innkjøpt vare &lt;-&gt;  delegrupper" />
+      <Label id="vv" layoutX="455.0" layoutY="53.0" text="Delegrupper &lt;-&gt; del" />
+      <Label id="vv" layoutX="674.0" layoutY="53.0" text="Del &lt;-&gt; egenskaper" />
+      <ListView fx:id="egenskapListe" layoutX="1043.0" layoutY="70.0" prefHeight="277.0" prefWidth="67.0" />
+      <TableView fx:id="varegruppeTabell" layoutX="12.0" layoutY="70.0" prefHeight="270.0" prefWidth="200.0">
+        <columns>
+          <TableColumn prefWidth="75.0" text="C1" />
+          <TableColumn prefWidth="75.0" text="C2" />
+        </columns>
+      </TableView>
+      <TableView fx:id="vareTabell" layoutX="239.0" layoutY="70.0" prefHeight="277.0" prefWidth="200.0">
+         <columns>
+            <TableColumn prefWidth="75.0" text="C1" />
+            <TableColumn prefWidth="75.0" text="C2" />
+         </columns>
+      </TableView>
+      <TableView layoutX="455.0" layoutY="70.0" prefHeight="277.0" prefWidth="200.0">
+         <columns>
+            <TableColumn prefWidth="75.0" text="C1" />
+            <TableColumn prefWidth="75.0" text="C2" />
+         </columns>
+      </TableView>
+      <TableView fx:id="verdiTabell" layoutX="674.0" layoutY="70.0" prefHeight="277.0" prefWidth="200.0">
+         <columns>
+            <TableColumn prefWidth="75.0" text="C1" />
+            <TableColumn prefWidth="75.0" text="C2" />
+         </columns>
+      </TableView>
+      <TableView fx:id="verdiTabell1" layoutX="886.0" layoutY="70.0" prefHeight="277.0" prefWidth="139.0">
+         <columns>
+            <TableColumn prefWidth="75.0" text="C1" />
+            <TableColumn prefWidth="75.0" text="C2" />
+         </columns>
+      </TableView>
+      <Label id="vv" layoutX="886.0" layoutY="53.0" text="Egenskaper &lt;-&gt; tillatte verdier" />
+      <Label id="vv" layoutX="1057.0" layoutY="53.0" text="Verdier" />
+      <VBox layoutX="24.0" layoutY="386.0" prefHeight="39.0" prefWidth="221.0">
+         <children>
+            <HBox prefHeight="31.0" prefWidth="200.0" />
+         </children>
+      </VBox>
+      <Button fx:id="nyVaregruppeKnapp" layoutX="355.0" layoutY="451.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="200.0" text="Ok" />
+      <Label layoutX="328.0" layoutY="385.0" prefHeight="17.0" prefWidth="192.0" text="Ny varegruppe" />
+      <ToolBar centerShape="false" layoutY="-1.0" prefHeight="31.0" prefWidth="1124.0">
+        <items>
+            <Button layoutX="100.0" layoutY="100.0" mnemonicParsing="false" prefHeight="23.0" prefWidth="67.0" text="Ny" />
+            <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="67.0" text="Endre" />
+            <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="67.0" text="Slett" textAlignment="CENTER" />
+            <Separator orientation="VERTICAL" prefHeight="0.0" prefWidth="4.0" />
+        </items>
+         <padding>
+            <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+         </padding>
+      </ToolBar>
+      <TextField layoutX="23.0" layoutY="413.0" prefHeight="25.0" prefWidth="177.0" />
+	</children>
+</Pane>

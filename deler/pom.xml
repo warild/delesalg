@@ -16,11 +16,10 @@
 	<packaging>pom</packaging>				<!-- filtype -->
 
 	<modules>
-		<!-- <module>deler-repo-api</module>
+		
 		<module>deler-service-api</module>		
+		<module>deler-facade-api</module>			
 		<module>deler-service</module>
-		<module>deler-repo</module> -->
-		<module>deler-facade-api</module>		
 		<module>deler-facade</module>
 		<module>deler-gui-javafx</module>		
 	</modules>

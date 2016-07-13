@@ -1,20 +1,14 @@
 package no.onlevel.deler.gui.controller;
 
-import java.awt.Panel;
 import java.io.IOException;
 
 import javafx.application.Application;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.geometry.Pos;
-import javafx.scene.Group;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
-import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
+import no.onlevel.deler.gui.fx.main.MainController;
 
 public class ForestillingController extends Application {
 
@@ -61,13 +55,13 @@ public class ForestillingController extends Application {
 	
 	private Pane lagMeny() throws IOException {
 		FXMLLoader loader = new FXMLLoader();
-		loader.setLocation(MenyController.class.getResource(MENY_FXML));		
+		loader.setLocation(MainController.class.getResource(MENY_FXML));		
 		return  (Pane) loader.load();
 	}
 
 	private Pane lagRegistrering() throws IOException {
 		FXMLLoader registreringLoader = new FXMLLoader();
-		registreringLoader.setLocation(RegistreringController.class.getResource(REGISTRERING_FXML));
+		registreringLoader.setLocation(RegistrerKjop.class.getResource(REGISTRERING_FXML));
 		return registreringLoader.load();
 	}
 	

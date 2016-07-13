@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.canvas.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.shape.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane fx:id="side" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="699.0" prefWidth="939.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="no.onlevel.deler.gui.fx.main.MainController">
+	<children>
+		<VBox fx:id="menypanel" layoutX="-1.0" prefHeight="90.0" prefWidth="939.0">
+			<children>
+      				<MenuBar prefHeight="25.0" prefWidth="933.0">
+      					<menus>
+      						<Menu mnemonicParsing="false" text="File">
+      							<items>
+      								<MenuItem mnemonicParsing="false" text="Close" />
+      							</items>
+      						</Menu>
+      						<Menu mnemonicParsing="false" text="Edit">
+      							<items>
+      								<MenuItem mnemonicParsing="false" text="Delete" />
+      							</items>
+      						</Menu>
+      						<Menu mnemonicParsing="false" text="Help">
+      							<items>
+      								<MenuItem mnemonicParsing="false" text="About" />
+      							</items>
+      						</Menu>
+      						<Menu fx:id="vedlikehold" mnemonicParsing="false" text="Vedlikehold">
+      							<items>
+      								<MenuItem fx:id="varegrupper" mnemonicParsing="false" text="Varegrupper" />
+      								<MenuItem mnemonicParsing="false" text="Merker" />
+      								<MenuItem mnemonicParsing="false" text="Unspecified Action" />
+      							</items>
+      						</Menu>
+      					</menus>
+      				</MenuBar>
+			</children>
+		</VBox>
+		<Pane fx:id="innhold" layoutX="0.0" layoutY="80.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="627.0" prefWidth="939.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+         <children>
+            <TabPane fx:id="app" layoutY="-56.0" prefHeight="674.0" prefWidth="939.0" stylesheets="@app.css" tabClosingPolicy="UNAVAILABLE" tabMaxHeight="50.0" tabMaxWidth="150.0" tabMinHeight="50.0" tabMinWidth="50.0">
+              <tabs>
+                <Tab fx:id="registrerTab" closable="false" text="Registrer" />
+                <Tab fx:id="finnTab" text="Søk" />
+                  <Tab text="Rapport">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                    </content>
+                  </Tab>
+                  <Tab fx:id="adminTab" text="Admin">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                    </content>
+                  </Tab>
+              </tabs>
+            </TabPane>
+         </children></Pane>  
+	</children>
+</Pane>
