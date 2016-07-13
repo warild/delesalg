@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+	<modelVersion>4.0.0</modelVersion>
+  
+	<parent>
+		<groupId>no.onlevel</groupId>
+		<artifactId>deler</artifactId>
+		<version>{$project.version}</version>
+	</parent>
+
+	<name>-   Facade-api</name>
+	<groupId>no.onlevel</groupId> 
+	<artifactId>deler-facade-api</artifactId>
+	<version>{$project.version}</version>	
+	<packaging>jar</packaging>
+
+    <dependencies>		
+	</dependencies>
+</project>
+
