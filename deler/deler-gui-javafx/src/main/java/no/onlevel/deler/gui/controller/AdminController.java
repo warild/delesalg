@@ -125,7 +125,7 @@ public class AdminController {
 		            FXCollections.observableArrayList(
 		                new VaregruppeVarer("Joe Smith", "s"),
 		                new VaregruppeVarer("Joe Smith2", "s"),
-		                new VaregruppeVarer("Havnegt 2", "s")
+		                new VaregruppeVarer("Havnegt 2", "ss")
 		            );
       		
 		 // opprett kolonne  
