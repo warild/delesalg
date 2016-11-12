@@ -10,3 +10,21 @@ lastebil  - lastebil
  
  innkommet -> varegrupper - varer
  oppdeling -> delegrupper - deler
+
+innkjøpt:  
+ T:varegrupper
+    T:kjøretøy
+       T:lastebil
+       T:traktor
+       T:buss
+    T:påbygg
+       T:
+    T:hengere
+    T:utstyr
+   
+   
+T:kjøretøy
+  T:id =
+
+  
+  

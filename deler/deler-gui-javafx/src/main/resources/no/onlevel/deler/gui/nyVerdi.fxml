@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.canvas.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.shape.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="113.0" prefWidth="245.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="no.onlevel.deler.gui.controller.NyVerdiController">
+	<children>
+      <Pane id="ny" layoutX="3.0" layoutY="4.0" prefHeight="106.0" prefWidth="238.0" stylesheets="@style.css">
+         <children>
+            <TextField fx:id="nyVerdiVerdi" layoutX="14.0" layoutY="37.0" prefHeight="25.0" prefWidth="161.0" promptText="ny gruppe" />
+            <Label fx:id="NyVerdiTekst" layoutX="14.0" layoutY="14.0" prefHeight="17.0" prefWidth="161.0" text="Ny varegruppe" />
+            <Button fx:id="nyVerdiOk" layoutX="108.0" layoutY="70.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="67.0" text="Ok" />
+            <Button fx:id="nyVerdiAvbryt" layoutX="14.0" layoutY="70.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="67.0" text="Avbryt" />
+         </children>
+      </Pane>
+	</children>
+</Pane>

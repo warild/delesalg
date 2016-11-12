@@ -1,0 +1,8 @@
+.tab-label { 
+    -fx-pref-width:150; 
+    -fx-alignment: bottom-left;
+    -fx-text-alignment: left;
+    -fx-padding: 10;
+    -fx-font-size: 14px;
+    fx-font-weight: bold;    
+}

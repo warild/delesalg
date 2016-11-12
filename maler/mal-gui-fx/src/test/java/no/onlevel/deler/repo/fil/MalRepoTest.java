@@ -18,6 +18,50 @@ public class MalRepoTest {
 	private static final String FILNAVN = "src//test//resources//egenskaperEnumTest.txt";
 	
 	@Test
+	public void vektorTest() throws IOException {
+		double vOmdreining = 0;
+		double fartVind = 1;
+		double fartRotor = 1;
+		double vVinge = 0;
+		
+		// bruker rotasjonsvinkel som referanse.
+		// vindens styrke endrer seg etter rotasjonen.
+		// rotasjonsfarten = konst
+		// opplevd vind er -vindfart*cos(rotasjonsvinkel) + rotasjonsfart 
+		
+		FartVektor innkommendeVind = new FartVektor(1, 90);
+		FartVektor rotor = new FartVektor(1, 90);
+
+		
+	}
+	
+	class FartVektor{
+		private double styrke;
+		private double retning; 
+		public FartVektor(double styrke, double retning) {
+			this.styrke = styrke;
+			this.retning = retning;
+		}
+		public double getStyrke() {
+			return styrke;
+		}
+		public void setStyrke(double styrke) {
+			this.styrke = styrke;
+		}
+		public double getRetning() {
+			return retning;
+		}
+		public void setRetning(double retning) {
+			this.retning = retning;
+		}
+	
+		
+		
+	}
+	
+	
+	
+	@Test
 	public void skrivTilFilTest() throws IOException {
 		// slett testfil..
 		Files.delete(Paths.get(FILNAVN));

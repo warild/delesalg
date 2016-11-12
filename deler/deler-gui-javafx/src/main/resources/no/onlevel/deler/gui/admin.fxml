@@ -22,12 +22,7 @@
       <Label id="vv" layoutX="455.0" layoutY="53.0" text="Delegrupper &lt;-&gt; del" />
       <Label id="vv" layoutX="674.0" layoutY="53.0" text="Del &lt;-&gt; egenskaper" />
       <ListView fx:id="egenskapListe" layoutX="1043.0" layoutY="70.0" prefHeight="277.0" prefWidth="67.0" />
-      <TableView fx:id="varegruppeTabell" layoutX="12.0" layoutY="70.0" prefHeight="270.0" prefWidth="200.0">
-        <columns>
-          <TableColumn prefWidth="75.0" text="C1" />
-          <TableColumn prefWidth="75.0" text="C2" />
-        </columns>
-      </TableView>
+      <TableView fx:id="varegruppeTabell" layoutX="12.0" layoutY="70.0" prefHeight="270.0" prefWidth="200.0" />
       <TableView fx:id="vareTabell" layoutX="239.0" layoutY="70.0" prefHeight="277.0" prefWidth="200.0">
          <columns>
             <TableColumn prefWidth="75.0" text="C1" />

@@ -11,19 +11,23 @@ import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.ButtonBar.ButtonData;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.control.ButtonType;
 import javafx.scene.control.Dialog;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TabPane;
+import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.GridPane;
 import javafx.scene.paint.Color;
-import no.onlevel.deler.facade.DelerFacade;
-import no.onlevel.deler.facade.api.FacadeApi;
+import no.onlevel.deler.facade.AdminFacadeSkriv;
+import no.onlevel.deler.facade.api.AdminFacadeApi;
 import no.onlevel.deler.facade.api.NyVerdiGuiRespons;
+import no.onlevel.deler.facade.domain.VaregruppeVarer;
+import no.onlevel.deler.gui.controller.RegistrerKjop.Egenskap;
 import no.onlevel.deler.gui.controller.domene.NyVerdiRequest;
 
 /**
@@ -32,10 +36,10 @@ import no.onlevel.deler.gui.controller.domene.NyVerdiRequest;
 public class AdminController {
 	private static final String NYVERDI_FXML = "/no/onlevel/deler/gui/nyVerdi.fxml";
 	
-	private FacadeApi facade = new DelerFacade();
+	private AdminFacadeApi facade = new AdminFacadeSkriv();
 	
 	@FXML
-	private TableView<String> varegruppeTabell ;
+	private TableView<VaregruppeVarer> varegruppeTabell ;
 
 	@FXML
 	private TableView<String> vareTabell ;
@@ -90,31 +94,58 @@ public class AdminController {
 		// 4: controller -> Håndter retur fra facade
 		// - vis gui på ny eller oppdater gui.
 		
+		
+		// Vis bilde		
 		String rammeTekst = "Varegruppe";
 		String ledetekst = "Navn på ny varegruppe";
 		String feilmeldingTekst = "";
-		String tekstfeltTekst = "";
-	
-		// Vis bilde		
-		NyVerdiRequest nyVerdi = getNyVerdiFx(rammeTekst, ledetekst, feilmeldingTekst,  tekstfeltTekst);
-		if (nyVerdi.getTryktKnapp().equals(ButtonData.OK_DONE)) {			
-			// Kall facaden for å lagre verdien
-			NyVerdiGuiRespons respons = facade.lagreNyVaregruppe(nyVerdi.getNyVerdi());
-			
-			while (nyVerdi.getTryktKnapp().equals(ButtonData.OK_DONE) && respons.getStatus() != "OK") {
-				System.out.println(nyVerdi.getNyVerdi());
-				
-				feilmeldingTekst = respons.getMelding();
-				tekstfeltTekst = nyVerdi.getNyVerdi();
-				nyVerdi = getNyVerdiFx(rammeTekst, ledetekst, feilmeldingTekst,  tekstfeltTekst);
-				if (nyVerdi.getTryktKnapp().equals(ButtonData.OK_DONE)) {
-					respons = facade.lagreNyVaregruppe(nyVerdi.getNyVerdi());
+		String tekstfeltTekst = "";	
+//		NyVerdiRequest nyVerdiFx = getNyVerdiFx(rammeTekst, ledetekst, feilmeldingTekst,  tekstfeltTekst);
+		
+		// Håndter knappetrykk
+		boolean visBilde = true;
+		
+		while (visBilde) {
+			NyVerdiRequest nyVerdiFx = visNyVerdiFx(rammeTekst, ledetekst, feilmeldingTekst,  tekstfeltTekst);
+			if (nyVerdiFx.getTryktKnapp().equals(ButtonData.OK_DONE)) {	
+				NyVerdiGuiRespons respons = facade.opprettNyVaregruppe(nyVerdiFx.getNyVerdi());
+				if (respons.getStatus() == "OK") {
+					visBilde = false;					
+				} else {
+					feilmeldingTekst = respons.getMelding();
+					tekstfeltTekst = nyVerdiFx.getNyVerdi();					
 				}
-			} 
-		}		
+			} else {
+				visBilde = false;
+			}
+		}
+
+		VaregruppeVarer varegruppeVarer = facade.getVaregruppeVarer();
+		 ObservableList<VaregruppeVarer> data =
+		            FXCollections.observableArrayList(
+		                new VaregruppeVarer("Joe Smith", "s"),
+		                new VaregruppeVarer("Joe Smith2", "s"),
+		                new VaregruppeVarer("Havnegt 2", "s")
+		            );
+      		
+		 // opprett kolonne  
+		 //         radtype, kolonnetype  
+        TableColumn<VaregruppeVarer, String> varegruppe = new TableColumn<VaregruppeVarer, String>("Varegruppe");
+        TableColumn<VaregruppeVarer, String> vare = new TableColumn<VaregruppeVarer, String>("Vare");
+        varegruppe.setCellValueFactory(new PropertyValueFactory<VaregruppeVarer, String>("varegruppe"));        
+        vare.setCellValueFactory(new PropertyValueFactory<VaregruppeVarer, String>("vare"));        
+        varegruppe.setMinWidth(100);
+        vare.setMinWidth(100);
+        
+        varegruppeTabell.setItems(data); 
+        varegruppeTabell.getItems().add( new VaregruppeVarer("Havnegt 22", "s"));
+        
+        varegruppeTabell.getColumns().add(varegruppe);
+        varegruppeTabell.getColumns().add(vare);
+		
 	};
 
-	private NyVerdiRequest getNyVerdiFx(String rammeTekst, String ledetekst, String feilmeldingTekst, String tekstfeltTekst)  {
+	private NyVerdiRequest visNyVerdiFx(String rammeTekst, String ledetekst, String feilmeldingTekst, String tekstfeltTekst)  {
 		// Opprett Dialog
 		Dialog<ButtonType> dialog = new Dialog<>();
 		dialog.setTitle(rammeTekst);
@@ -182,4 +213,5 @@ public class AdminController {
 
  
     }
+
 }

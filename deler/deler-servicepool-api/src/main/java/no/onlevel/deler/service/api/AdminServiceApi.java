@@ -1,6 +1,7 @@
 package no.onlevel.deler.service.api;
 
 import no.onlevel.deler.service.domain.NyVerdiRespons;
+import no.onlevel.deler.service.exception.VaregruppenavnFinnesException;
 
 /** 
  * Metoder for å oppdatere app
@@ -8,6 +9,6 @@ import no.onlevel.deler.service.domain.NyVerdiRespons;
  */
 public interface AdminServiceApi {
 		
-	NyVerdiRespons lagreNyVaregruppe(String nyVaregruppe);
+	NyVerdiRespons lagreNyVaregruppe(String nyVaregruppe) throws VaregruppenavnFinnesException;
 	
 }

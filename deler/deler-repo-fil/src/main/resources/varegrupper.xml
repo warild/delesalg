@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xml> 
+    <t>varegrupper</t>
+    <d>Varegrupper</d>
+	<c> 
+		<t>lastebil</t>		
+		<d>Lastebil</d>
+	</c>
+	<c>
+		<t>lastebildeler</t>		
+		<d>Lastebildeler</d>
+	</c>
+	<c>
+		<t>paabygg</t>		
+		<d>Påbygg</d>
+	</c>	
+</xml>
+

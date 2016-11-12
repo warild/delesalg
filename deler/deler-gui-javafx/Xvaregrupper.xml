@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xml>
+Innkjøp:
+varegrupper
+  vare + egenskaper
+    delegrupper
+      del + egenskaper
+        detaljGruppe
+          detalj + egenskaper
+          
+            -egenskaper
+        
+Kjøretøy
+Påbygg
+Tilbehør
+Slitedeler
+
+  Lastebil - hel
+  Lastebil - deler
+    Drivlinje:delegruppe
+      Motor - hel : del detaljGruppe
+      Motor - deler :detalj 
+      Gearkasse :del
+      Retarder
+      Mellomaksel
+      Styresnekke
+    Karosseri
+  Buss
+  Traktor
+ 
+  Plan
+  Kran
+  Hengerfeste
+  
+  Tilhenger
+  
+  Dekk
+  
+    <t>varegrupper</t>
+    <d>Varegrupper</d>
+    <c>
+        <t>vare</t>
+        <d>Lastebil</d>
+        <c>
+        	<t>lastebil</t>
+        	<d>Lastebil</d>
+			<c>
+    	    	<t>delegrupper</t>
+        		<d>Delegrupper</d>
+	        	<c>
+    	    		<t>del</t>
+        			<d>Drivlinje</d>
+        		</c>
+	        	
+	        	<c>	        	
+    	    		<t>drivlinje</t>
+        			<d>Drivlinje</d>
+        		</c>
+        		<c>
+        			<t>karosseri</t>
+        			<d>Karosseri</d>
+        		</c>
+			</c>
+        </c>
+        </c>
+    <c>
+        <t>hjk</t>
+        <d>hjk</d>
+    </c>
+</xml>
