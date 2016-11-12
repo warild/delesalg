@@ -56,7 +56,7 @@ public class AdminFacadeSkriv implements AdminFacadeApi {
 	
 	private NyVerdiGuiRespons lagreNyttVaregruppenavn(String navn) {
 		try {
-			lagringService.lagre(navn, VAREGRUPPE_LISTE);
+//			lagringService.lagre(navn, VAREGRUPPE_LISTE);
 		} catch (Exception e) {
 			return new NyVerdiGuiRespons("Lagringsfeil", e.getMessage());
 		}

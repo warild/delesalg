@@ -5,7 +5,7 @@ import no.onlevel.deler.service.api.AdminServiceApi;
 
 public class ValideringService {
 
-	AdminLesApi lagringService = new AdminLes();
+//	AdminLesApi lagringService = new AdminLes();
 	
 	public void harInnhold(String navn) {
 		if (navn.trim().equals("")) {

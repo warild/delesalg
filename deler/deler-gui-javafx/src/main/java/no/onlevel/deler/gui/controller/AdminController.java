@@ -120,7 +120,7 @@ public class AdminController {
 			}
 		}
 
-		VaregruppeVarer varegruppeVarer = facade.getVaregruppeVarer();
+//		VaregruppeVarer varegruppeVarer = facade.getVaregruppeVarer();
 		 ObservableList<VaregruppeVarer> data =
 		            FXCollections.observableArrayList(
 		                new VaregruppeVarer("Joe Smith", "s"),
